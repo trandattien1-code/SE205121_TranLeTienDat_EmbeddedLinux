@@ -1,0 +1,35 @@
+#!/bin/sh
+echo '[ LAB-02 ] Starting system initialization...'
+
+mount -t proc none /proc
+mount -t sysfs none /sys
+mount -t tmpfs none /tmp
+mount -t devtmpfs none /dev 2>/dev/null || true
+
+[ -c /dev/console ] || mknod /dev/console c 5 1
+[ -c /dev/null    ] || mknod /dev/null    c 1 3
+[ -c /dev/zero    ] || mknod /dev/zero    c 1 5
+
+hostname embedded-lab2
+
+echo '[ LAB-02 ] Loading lab2_driver...'
+MODULE=/lib/modules/5.15.0/lab2_driver.ko
+
+if [ ! -f "$MODULE" ]; then
+    echo '[ LAB-02 ] WARNING: lab2_driver.ko not found — continuing boot'
+else
+    insmod "$MODULE"
+    if [ $? -eq 0 ]; then
+        echo '[ LAB-02 ] lab2_driver loaded OK'
+        mknod /dev/lab2 c 240 0
+        chmod 666 /dev/lab2
+        echo '[ LAB-02 ] /dev/lab2 created (major=240, minor=0)'
+    else
+        echo '[ LAB-02 ] ERROR: insmod failed — continuing boot without driver'
+    fi
+fi
+
+echo '[ LAB-02 ] Init complete!'
+echo '  -> test_driver.sh   : test char device'
+echo '  -> test_procfs.sh   : test proc/sysfs'
+echo '  -> cat /proc/lab2_info'
