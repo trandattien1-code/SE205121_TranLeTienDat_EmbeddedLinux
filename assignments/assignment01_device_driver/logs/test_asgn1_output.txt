@@ -1,0 +1,115 @@
+ ASSIGNMENT 01 - TASK 1 TEST
+=================================
+[1] Loading kernel module
+asgn1_driver: initializing
+asgn1_driver: loaded, major=241
+[2] Checking device node
+crw-------    1 root     0         241,   0 Nov  6 16:58 [1;35m/dev/asgn1[m
+[3] Running ioctl tests
+asgn1_driver: device opened, count=1
+===== ASSIGNMENT 01 IOCTL TEST =====
+
+[TEST 1] GET_VERSION
+asgn1_driver: GET_VERSION
+Driver version: asgn1_driver v1.0 - SE205121
+GET_VERSION PASS
+
+[TEST 2] KERNEL MODE
+asgn1_driver: SET_MODE=0
+asgn1_driver: write 5 bytes
+asgn1_driver: read 13 bytes
+Read: [KERNEL]hello
+KERNEL MODE PASS
+
+[TEST 3] ECHO MODE
+asgn1_driver: SET_MODE=1
+asgn1_driver: write 5 bytes
+asgn1_driver: device closed
+asgn1_driver: device opened, count=2
+asgn1_driver: read 5 bytes
+Read: world
+ECHO MODE PASS
+
+[TEST 4] GET_STATS
+asgn1_driver: GET_STATS
+open_count      = 2
+write_count     = 2
+read_count      = 2
+buffer_len      = 5
+last_write_size = 5
+GET_STATS PASS
+
+[TEST 5] RESET_BUFFER
+asgn1_driver: RESET_BUFFER
+asgn1_driver: GET_STATS
+After reset:
+write_count = 0
+read_count  = 0
+buffer_len  = 0
+RESET STATS PASS
+asgn1_driver: device closed
+asgn1_driver: device opened, count=3
+RESET BUFFER PASS
+asgn1_driver: device closed
+
+===== TEST SUMMARY =====
+ALL TESTS PASS
+[4] Driver statistics
+ASSIGNMENT-01 Driver Statistics
+===============================
+Driver name     : asgn1
+Major number    : 241
+Buffer size     : 1024
+Buffer length   : 0
+Open count      : 3
+Write count     : 0
+Read count      : 0
+Last write size : 0
+Current mode    : 1
+[5] Unloading module
+asgn1_driver: module unloaded
+[6] Checking cleanup
+Cleanup PASS
+[7] Kernel messages
+drm-clcd-pl111 10020000.clcd: initializing Versatile Express PL111
+drm-clcd-pl111 10020000.clcd: found bridge on endpoint 0
+drm-clcd-pl111 10020000.clcd: Using non-panel bridge
+[drm] Initialized pl111 1.0.0 20170317 for 10020000.clcd on minor 0
+input: AT Raw Set 2 keyboard as /devices/platform/bus@40000000/bus@40000000:motherboard-bus@40000000/bus@40000000:motherboard-bus@40000000:iofpga@7,00000000/10006000.kmi/serio0/input/input0
+Console: switching to colour frame buffer device 128x48
+drm-clcd-pl111 10020000.clcd: [drm] fb0: pl111 frame buffer device
+ALSA device list:
+  #0: ARM AC'97 Interface PL041 rev0 at 0x10004000, irq 32
+Freeing unused kernel image (initmem) memory: 1024K
+Run /init as init process
+  with arguments:
+    /init
+  with environment:
+    HOME=/
+    TERM=linux
+lab2_driver: loading out-of-tree module taints kernel.
+lab2_driver: initializing module
+lab2_driver: loaded, major=240
+input: ImExPS/2 Generic Explorer Mouse as /devices/platform/bus@40000000/bus@40000000:motherboard-bus@40000000/bus@40000000:motherboard-bus@40000000:iofpga@7,00000000/10007000.kmi/serio1/input/input2
+random: fast init done
+asgn1_driver: initializing
+asgn1_driver: loaded, major=241
+asgn1_driver: device opened, count=1
+asgn1_driver: GET_VERSION
+asgn1_driver: SET_MODE=0
+asgn1_driver: write 5 bytes
+asgn1_driver: read 13 bytes
+asgn1_driver: SET_MODE=1
+asgn1_driver: write 5 bytes
+asgn1_driver: device closed
+asgn1_driver: device opened, count=2
+asgn1_driver: read 5 bytes
+asgn1_driver: GET_STATS
+asgn1_driver: RESET_BUFFER
+asgn1_driver: GET_STATS
+asgn1_driver: device closed
+asgn1_driver: device opened, count=3
+asgn1_driver: device closed
+asgn1_driver: module unloaded
+=================================
+ ALL TASK 1 TESTS PASSED

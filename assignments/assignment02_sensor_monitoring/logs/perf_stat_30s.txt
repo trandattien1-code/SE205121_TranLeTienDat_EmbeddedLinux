@@ -1,0 +1,18 @@
+# started on Sat Nov  7 01:26:19 2026
+
+
+ Performance counter stats for './app/sms_app_x86 -i 500 -t 40 -h 80 -d 30':
+
+             17.04 msec task-clock
+               801      context-switches
+                39      cpu-migrations
+                81      page-faults
+        28,269,214      cpu_atom/cycles/                                                        (52.25%)
+        16,063,598      cpu_core/cycles/                                                        (66.08%)
+        10,169,665      cpu_atom/instructions/                                                  (52.25%)
+         9,717,873      cpu_core/instructions/                                                  (66.08%)
+
+      29.508285357 seconds time elapsed
+
+       0.002154000 seconds user
+       0.019394000 seconds sys

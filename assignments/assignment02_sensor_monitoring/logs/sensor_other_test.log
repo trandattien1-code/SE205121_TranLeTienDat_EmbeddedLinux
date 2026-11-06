@@ -1,0 +1,28 @@
+[ALERT][8332676] TYPE: TEMP_HIGH VALUE: 40.50 THRESHOLD: 40.00
+[ALERT][8333176] TYPE: TEMP_HIGH VALUE: 41.50 THRESHOLD: 40.00
+[ALERT][8333677] TYPE: TEMP_HIGH VALUE: 42.50 THRESHOLD: 40.00
+[ALERT][8334177] TYPE: TEMP_HIGH VALUE: 43.50 THRESHOLD: 40.00
+[ALERT][8334677] TYPE: TEMP_HIGH VALUE: 44.50 THRESHOLD: 40.00
+[ALERT][8335177] TYPE: TEMP_SPIKE VALUE: 19.00 THRESHOLD: 5.00
+===== SMS CONFIGURATION =====
+Interval: 500 ms
+Temperature threshold: 40.00 C
+Humidity threshold: 80.00 %
+Duration: 10 sec
+Verbose: OFF
+Circular buffer initialized
+POSIX message queues initialized
+All four threads started successfully
+
+Run duration completed
+
+===== SMS SUMMARY =====
+Samples read: 20
+Samples processed: 20
+Total alarms: 6
+TEMP_HIGH: 5
+HUMID_HIGH: 0
+TEMP_SPIKE: 1
+Buffer overflow: 0
+Log messages: 26
+Graceful shutdown completed

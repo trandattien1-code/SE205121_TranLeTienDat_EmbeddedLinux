@@ -1,0 +1,35 @@
+==44505== Memcheck, a memory error detector
+==44505== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==44505== Using Valgrind-3.26.0 and LibVEX; rerun with -h for copyright info
+==44505== Command: /home/ryusangg-se205121/embedded_lab3/apps/leaky_app
+==44505== Parent PID: 27837
+==44505==
+==44505==
+==44505== HEAP SUMMARY:
+==44505==     in use at exit: 16,900 bytes in 250 blocks
+==44505==   total heap usage: 352 allocs, 102 frees, 21,124 bytes allocated
+==44505==
+==44505== 2,000 bytes in 100 blocks are definitely lost in loss record 1 of 3
+==44505==    at 0x4850858: malloc (vg_replace_malloc.c:447)
+==44505==    by 0x4001280: create_record (leaky_app.c:20)
+==44505==    by 0x4001414: main (leaky_app.c:53)
+==44505==
+==44505== 2,100 bytes in 100 blocks are definitely lost in loss record 2 of 3
+==44505==    at 0x4850858: malloc (vg_replace_malloc.c:447)
+==44505==    by 0x400124D: create_record (leaky_app.c:18)
+==44505==    by 0x4001414: main (leaky_app.c:53)
+==44505==
+==44505== 12,800 bytes in 50 blocks are definitely lost in loss record 3 of 3
+==44505==    at 0x4850858: malloc (vg_replace_malloc.c:447)
+==44505==    by 0x4001314: process_messages (leaky_app.c:36)
+==44505==    by 0x4001487: main (leaky_app.c:63)
+==44505==
+==44505== LEAK SUMMARY:
+==44505==    definitely lost: 16,900 bytes in 250 blocks
+==44505==    indirectly lost: 0 bytes in 0 blocks
+==44505==      possibly lost: 0 bytes in 0 blocks
+==44505==    still reachable: 0 bytes in 0 blocks
+==44505==         suppressed: 0 bytes in 0 blocks
+==44505==
+==44505== For lists of detected and suppressed errors, rerun with: -s
+==44505== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)

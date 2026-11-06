@@ -1,0 +1,1 @@
+make -C /home/ryusangg-se205121/embedded_lab1/kernel/linux-5.15 M=/home/ryusangg-se205121/SE205121_TranLeTienDat_Asgn02/driver ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- EXTRA_CFLAGS="-march=armv7-a" modules

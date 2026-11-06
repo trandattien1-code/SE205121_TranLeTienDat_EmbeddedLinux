@@ -1,0 +1,28 @@
+5e69469b4000-5e69469b6000 r--p 00000000 103:04 142579                    /home/ryusangg-se205121/SE205121_TranLeTienDat_Asgn02/app/sms_app_x86
+5e69469b6000-5e69469b9000 r-xp 00002000 103:04 142579                    /home/ryusangg-se205121/SE205121_TranLeTienDat_Asgn02/app/sms_app_x86
+5e69469b9000-5e69469ba000 r--p 00005000 103:04 142579                    /home/ryusangg-se205121/SE205121_TranLeTienDat_Asgn02/app/sms_app_x86
+5e69469ba000-5e69469bb000 r--p 00005000 103:04 142579                    /home/ryusangg-se205121/SE205121_TranLeTienDat_Asgn02/app/sms_app_x86
+5e69469bb000-5e69469bc000 rw-p 00006000 103:04 142579                    /home/ryusangg-se205121/SE205121_TranLeTienDat_Asgn02/app/sms_app_x86
+5e69472ce000-5e69472f0000 rw-p 00000000 00:00 0                          [heap]
+77bf0c000000-77bf0c021000 rw-p 00000000 00:00 0
+77bf0c021000-77bf10000000 ---p 00000000 00:00 0
+77bf103fc000-77bf12400000 rw-p 00000000 00:00 0
+77bf12400000-77bf12428000 r--p 00000000 103:04 1051754                   /usr/lib/x86_64-linux-gnu/libc.so.6
+77bf12428000-77bf125c0000 r-xp 00028000 103:04 1051754                   /usr/lib/x86_64-linux-gnu/libc.so.6
+77bf125c0000-77bf1260e000 r--p 001c0000 103:04 1051754                   /usr/lib/x86_64-linux-gnu/libc.so.6
+77bf1260e000-77bf12612000 r--p 0020e000 103:04 1051754                   /usr/lib/x86_64-linux-gnu/libc.so.6
+77bf12612000-77bf12614000 rw-p 00212000 103:04 1051754                   /usr/lib/x86_64-linux-gnu/libc.so.6
+77bf12614000-77bf12621000 rw-p 00000000 00:00 0
+77bf12807000-77bf1280a000 rw-p 00000000 00:00 0
+77bf12820000-77bf12822000 rw-p 00000000 00:00 0
+77bf12822000-77bf12826000 r--p 00000000 00:00 0                          [vvar]
+77bf12826000-77bf12828000 r--p 00000000 00:00 0                          [vvar_vclock]
+77bf12828000-77bf1282a000 r-xp 00000000 00:00 0                          [vdso]
+77bf1282a000-77bf1282b000 r--p 00000000 103:04 1051751                   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+77bf1282b000-77bf1285a000 r-xp 00001000 103:04 1051751                   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+77bf1285a000-77bf12865000 r--p 00030000 103:04 1051751                   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+77bf12865000-77bf12867000 r--p 0003b000 103:04 1051751                   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+77bf12867000-77bf12868000 rw-p 0003d000 103:04 1051751                   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+77bf12868000-77bf12869000 rw-p 00000000 00:00 0
+7fffe5abd000-7fffe5ade000 rw-p 00000000 00:00 0                          [stack]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]

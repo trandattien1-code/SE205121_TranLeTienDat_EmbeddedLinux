@@ -1,0 +1,90 @@
+ ASSIGNMENT 01 - TASK 2 TEST
+=================================
+[1] Loading counter driver
+counter_driver: loaded, major=10, minor=125
+[2] Checking device node
+crw-rw-rw-    1 root     0          10, 125 Nov  6 17:04 [1;35m/dev/counter[m
+PASS: Major number
+[3] Testing auto-increment
+counter_driver: read=0
+counter_driver: read=1
+counter_driver: read=2
+PASS: First read
+PASS: Second read
+PASS: Third read
+
+===== PROC STATS BEFORE WRITE =====
+Counter value : 3
+Total reads   : 3
+Total writes  : 0
+
+[4] Testing SET counter = 100
+counter_driver: set counter=100
+counter_driver: read=100
+PASS: Set 100
+
+===== PROC STATS AFTER WRITE =====
+Counter value : 101
+Total reads   : 4
+Total writes  : 1
+
+[5] Testing RESET counter = 0
+counter_driver: set counter=0
+counter_driver: read=0
+PASS: Reset 0
+
+===== PROC STATS AFTER RESET =====
+Counter value : 1
+Total reads   : 5
+Total writes  : 2
+
+[6] Testing invalid inputs
+PASS: rejected abc
+PASS: rejected -5
+
+[7] Final procfs statistics
+Counter value : 1
+Total reads   : 5
+Total writes  : 2
+
+[8] Unloading counter driver
+counter_driver: unloaded
+[9] Checking cleanup
+PASS: cleanup
+
+[10] Kernel messages
+drm-clcd-pl111 10020000.clcd: initializing Versatile Express PL111
+drm-clcd-pl111 10020000.clcd: found bridge on endpoint 0
+drm-clcd-pl111 10020000.clcd: Using non-panel bridge
+[drm] Initialized pl111 1.0.0 20170317 for 10020000.clcd on minor 0
+input: AT Raw Set 2 keyboard as /devices/platform/bus@40000000/bus@40000000:motherboard-bus@40000000/bus@40000000:motherboard-bus@40000000:iofpga@7,00000000/10006000.kmi/serio0/input/input0
+Console: switching to colour frame buffer device 128x48
+drm-clcd-pl111 10020000.clcd: [drm] fb0: pl111 frame buffer device
+ALSA device list:
+  #0: ARM AC'97 Interface PL041 rev0 at 0x10004000, irq 32
+Freeing unused kernel image (initmem) memory: 1024K
+Run /init as init process
+  with arguments:
+    /init
+  with environment:
+    HOME=/
+    TERM=linux
+lab2_driver: loading out-of-tree module taints kernel.
+lab2_driver: initializing module
+lab2_driver: loaded, major=240
+input: ImExPS/2 Generic Explorer Mouse as /devices/platform/bus@40000000/bus@40000000:motherboard-bus@40000000/bus@40000000:motherboard-bus@40000000:iofpga@7,00000000/10007000.kmi/serio1/input/input2
+random: fast init done
+counter_driver: loaded, major=10, minor=125
+counter_driver: read=0
+counter_driver: read=1
+counter_driver: read=2
+counter_driver: set counter=100
+counter_driver: read=100
+counter_driver: set counter=0
+counter_driver: read=0
+counter_driver: unloaded
+
+=================================
+ TEST SUMMARY
+=================================
+ALL TASK 2 TESTS PASSED

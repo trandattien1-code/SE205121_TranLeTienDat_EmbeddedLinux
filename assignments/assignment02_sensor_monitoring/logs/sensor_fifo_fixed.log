@@ -1,0 +1,23 @@
+===== SMS CONFIGURATION =====
+Interval: 500 ms
+Temperature threshold: 40.00 C
+Humidity threshold: 80.00 %
+Duration: 5 sec
+Verbose: OFF
+Circular buffer initialized
+POSIX message queues initialized
+Sensor Thread: SCHED_FIFO priority 50
+All four threads started successfully
+
+Run duration completed
+
+===== SMS SUMMARY =====
+Samples read: 11
+Samples processed: 11
+Total alarms: 0
+TEMP_HIGH: 0
+HUMID_HIGH: 0
+TEMP_SPIKE: 0
+Buffer overflow: 0
+Log messages: 11
+Graceful shutdown completed

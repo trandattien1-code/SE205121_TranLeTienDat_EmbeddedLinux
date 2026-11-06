@@ -1,0 +1,34 @@
+=== Perf Target App - LAB-03 ===
+[1] CPU-intensive computation...
+    Result: 11433083166.074631
+[2] Linear search (1000 times)...
+[3] I/O intensive (write 10000 lines)...
+Done.
+
+ Performance counter stats for '/home/ryusangg-se205121/embedded_lab3/apps/perf_target':
+
+                14      context-switches                 #    571.1 cs/sec  cs_per_second
+                 1      cpu-migrations                   #     40.8 migrations/sec  migrations_per_second
+               377      page-faults                      #  15378.5 faults/sec  page_faults_per_second
+             24.51 msec task-clock                       #      0.9 CPUs  CPUs_utilized
+             6,028      cpu_core/branch-misses/          #      0.0 %  branch_miss_rate         (80.35%)
+        58,611,359      cpu_core/branches/               #   2390.9 M/sec  branch_frequency     (80.35%)
+        86,127,270      cpu_core/cpu-cycles/             #      3.5 GHz  cycles_frequency       (80.35%)
+       424,229,019      cpu_core/instructions/           #      4.9 instructions  insn_per_cycle  (80.35%)
+           439,758      cpu_atom/branch-misses/          #      6.2 %  branch_miss_rate         (1.83%)
+        14,437,625      cpu_atom/branches/               #    588.9 M/sec  branch_frequency     (5.90%)
+        69,114,806      cpu_atom/cpu-cycles/             #      2.8 GHz  cycles_frequency       (9.97%)
+       162,311,518      cpu_atom/instructions/           #      2.3 instructions  insn_per_cycle  (14.05%)
+             TopdownL1 (cpu_core)                        #      0.1 %  tma_bad_speculation
+                                                         #      6.3 %  tma_frontend_bound       (80.35%)
+                                                         #      8.6 %  tma_backend_bound
+                                                         #     85.0 %  tma_retiring             (80.35%)
+             TopdownL1 (cpu_atom)                        #     38.2 %  tma_backend_bound        (13.75%)
+                                                         #      2.4 %  tma_frontend_bound       (9.68%)
+                                                         #     -1.4 %  tma_bad_speculation
+                                                         #     60.8 %  tma_retiring             (5.60%)
+
+       0.025854282 seconds time elapsed
+
+       0.022227000 seconds user
+       0.003031000 seconds sys

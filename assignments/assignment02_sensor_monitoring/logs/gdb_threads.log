@@ -1,0 +1,83 @@
+Breakpoint 1 at 0x32b0: file sensor_thread.c, line 37.
+Breakpoint 2 at 0x35c0: file processor_thread.c, line 33.
+Breakpoint 3 at 0x3970: file alert_thread.c, line 28.
+Breakpoint 4 at 0x3b40: file logger_thread.c, line 38.
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7ffff7bff6c0 (LWP 45287)]
+[New Thread 0x7ffff73fe6c0 (LWP 45288)]
+[Switching to Thread 0x7ffff7bff6c0 (LWP 45287)]
+
+Thread 2 "sms_app_x86" hit Breakpoint 4, logger_thread_main (arg=0x7fffffffd7e0) at logger_thread.c:38
+38	{
+  Id   Target Id                                       Frame
+  1    Thread 0x7ffff7f9d740 (LWP 45281) "sms_app_x86" __GI___clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:62
+* 2    Thread 0x7ffff7bff6c0 (LWP 45287) "sms_app_x86" logger_thread_main (arg=0x7fffffffd7e0) at logger_thread.c:38
+  3    Thread 0x7ffff73fe6c0 (LWP 45288) "sms_app_x86" alert_thread_main (arg=0x7fffffffd850) at alert_thread.c:28
+
+Thread 3 (Thread 0x7ffff73fe6c0 (LWP 45288) "sms_app_x86"):
+#0  alert_thread_main (arg=0x7fffffffd850) at alert_thread.c:28
+#1  0x00007ffff7ca3dfa in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:454
+#2  0x00007ffff7d375cc in __GI___clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 2 (Thread 0x7ffff7bff6c0 (LWP 45287) "sms_app_x86"):
+#0  logger_thread_main (arg=0x7fffffffd7e0) at logger_thread.c:38
+#1  0x00007ffff7ca3dfa in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:454
+#2  0x00007ffff7d375cc in __GI___clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 1 (Thread 0x7ffff7f9d740 (LWP 45281) "sms_app_x86"):
+#0  __GI___clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:62
+#1  0x00007ffff7d374de in __clone3_internal (cl_args=0x7fffffffd560, func=0x7ffff7ca3b00 <start_thread>, arg=0x7ffff6bfd6c0) at ../sysdeps/unix/sysv/linux/clone-internal.c:82
+#2  __GI___clone_internal (cl_args=cl_args@entry=0x7fffffffd560, func=func@entry=0x7ffff7ca3b00 <start_thread>, arg=arg@entry=0x7ffff6bfd6c0) at ../sysdeps/unix/sysv/linux/clone-internal.c:100
+[New Thread 0x7ffff6bfd6c0 (LWP 45289)]
+[Switching to Thread 0x7ffff73fe6c0 (LWP 45288)]
+
+Thread 3 "sms_app_x86" hit Breakpoint 3, alert_thread_main (arg=0x7fffffffd850) at alert_thread.c:28
+28	{
+[Switching to Thread 0x7ffff6bfd6c0 (LWP 45289)]
+
+Thread 4 "sms_app_x86" hit Breakpoint 2, processor_thread_main (arg=0x7fffffffd880) at processor_thread.c:33
+33	{
+[New Thread 0x7ffff63fc6c0 (LWP 45290)]
+[Switching to Thread 0x7ffff63fc6c0 (LWP 45290)]
+
+Thread 5 "sms_app_x86" hit Breakpoint 1, sensor_thread_main (arg=0x7fffffffd820) at sensor_thread.c:37
+37	{
+[ALERT][7857901] TYPE: TEMP_HIGH VALUE: 40.50 THRESHOLD: 40.00
+[ALERT][7858401] TYPE: TEMP_HIGH VALUE: 41.50 THRESHOLD: 40.00
+[ALERT][7858901] TYPE: TEMP_HIGH VALUE: 42.50 THRESHOLD: 40.00
+[ALERT][7859401] TYPE: TEMP_HIGH VALUE: 43.50 THRESHOLD: 40.00
+[ALERT][7859902] TYPE: TEMP_HIGH VALUE: 44.50 THRESHOLD: 40.00
+[ALERT][7860402] TYPE: TEMP_SPIKE VALUE: 19.00 THRESHOLD: 5.00
+[Thread 0x7ffff63fc6c0 (LWP 45290) exited]
+[Thread 0x7ffff6bfd6c0 (LWP 45289) exited]
+[Thread 0x7ffff73fe6c0 (LWP 45288) exited]
+[Thread 0x7ffff7bff6c0 (LWP 45287) exited]
+===== SMS CONFIGURATION =====
+Interval: 500 ms
+Temperature threshold: 40.00 C
+Humidity threshold: 80.00 %
+Duration: 10 sec
+Verbose: OFF
+Circular buffer initialized
+POSIX message queues initialized
+All four threads started successfully
+
+Run duration completed
+
+===== SMS SUMMARY =====
+Samples read: 20
+Samples processed: 20
+Total alarms: 6
+TEMP_HIGH: 5
+HUMID_HIGH: 0
+TEMP_SPIKE: 1
+Buffer overflow: 0
+Log messages: 26
+Graceful shutdown completed
+[Inferior 1 (process 45281) exited normally]

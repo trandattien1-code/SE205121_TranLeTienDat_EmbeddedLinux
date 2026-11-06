@@ -1,0 +1,5 @@
+#0  process_data (data=0x7efffcf0, len=5) at /home/ryusangg-se205121/embedded_lab3/apps/buggy_app.c:8
+#1  0x00400774 in main (argc=1, argv=0x7efffe94) at /home/ryusangg-se205121/embedded_lab3/apps/buggy_app.c:31
+$8 = 5
+$9 = 5
+$10 = (int *) 0x7efffd04

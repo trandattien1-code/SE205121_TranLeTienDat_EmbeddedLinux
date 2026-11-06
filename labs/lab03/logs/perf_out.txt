@@ -1,0 +1,23 @@
+perf_target   47102 28132.546173:    5050505 cpu_atom/cycles/P:
+	    75119d5a02b7 __ieee754_log_fma+0xf7 (/usr/lib/x86_64-linux-gnu/libm.so.6)
+	40f1e78000000000 [unknown] ([unknown])
+
+perf_target   47102 28132.548981:    8044580 cpu_atom/cycles/P:
+	    75119d5a025d __ieee754_log_fma+0x9d (/usr/lib/x86_64-linux-gnu/libm.so.6)
+	40f550e000000000 [unknown] ([unknown])
+
+perf_target   47102 28132.553156:    5050505 cpu_core/cycles/P:
+	    5d1d119c3282 heavy_compute+0x22 (/home/ryusangg-se205121/embedded_lab3/apps/perf_target)
+	40e98e6000000000 [unknown] ([unknown])
+
+perf_target   47102 28132.555432:    8273926 cpu_core/cycles/P:
+	    5d1d119c32b6 heavy_compute+0x56 (/home/ryusangg-se205121/embedded_lab3/apps/perf_target)
+	40de630000000000 [unknown] ([unknown])
+
+perf_target   47102 28132.559409:   14785388 cpu_core/cycles/P:
+	    75119d5a02b7 __ieee754_log_fma+0xf7 (/usr/lib/x86_64-linux-gnu/libm.so.6)
+	40f015c000000000 [unknown] ([unknown])
+
+perf_target   47102 28132.565778:   24127641 cpu_core/cycles/P:
+	    75119d5a0286 __ieee754_log_fma+0xc6 (/usr/lib/x86_64-linux-gnu/libm.so.6)
+	40ee684000000000 [unknown] ([unknown])

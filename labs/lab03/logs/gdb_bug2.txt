@@ -1,0 +1,4 @@
+#0  create_message (text=0x400940 "Hello Embedded Linux") at /home/ryusangg-se205121/embedded_lab3/apps/buggy_app.c:17
+#1  0x00400788 in main (argc=1, argv=0x7efffe94) at /home/ryusangg-se205121/embedded_lab3/apps/buggy_app.c:34
+$13 = 0x422010 "\"\004"
+0x422010:	"\"\004"
